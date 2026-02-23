@@ -100,7 +100,7 @@ function provisioning_get_workflow() {
 
 function provisioning_get_apt_packages() {
     if [[ ${#APT_PACKAGES[@]} -gt 0 ]]; then
-        sudo $APT_INSTALL "${APT_PACKAGES[@]}"
+        apt-get install -y "${APT_PACKAGES[@]}"
     fi
 }
 
